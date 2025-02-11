@@ -1,49 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flexbox Box Example</title>
+    <title>Flex</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
+        body, html {
             margin: 0;
-            background-color: #f0f0f0;
+            padding: 0;
+            height: 100%;
+            font-family: Georgia, 'Times New Roman', Times, serif;
         }
-
         .container {
             display: flex;
-            flex-direction: row; /* Change to 'column' for vertical layout */
-            justify-content: space-around; /* Space between items */
-            align-items: center; /* Center items vertically */
-            width: 80%;
-            height: 200px;
-            background-color: #ffffff;
-            border: 2px solid #007BFF;
-            border-radius: 8px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 100%;
+            flex-direction: column;
+            height: 100vh;
         }
-
-        .item {
-            background-color: #007BFF;
+        header, footer {
+            background-color: #333;
             color: white;
-            padding: 20px;
-            border-radius: 4px;
             text-align: center;
-            flex: 1; /* Allow items to grow equally */
-            margin: 10px; /* Space between items */
+            padding: 1%;
+        }
+        .main {
+            display: flex;
+            flex-wrap: wrap;
+            flex: 1;
+        }
+        .main >div {
+            flex: 1;;
+            padding: 1em;
+        }
+        .main .left {
+            background-color: #f4f4f4;
+        }
+        .main .right {
+            background-color: #e4e4e4;
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <div class="item">Item 1</div>
-        <div class="item">Item 2</div>
-        <div class="item">Item 3</div>
-        <div class="item">Item 4</div>
+        <header>
+            <h1>Header</h1>
+        </header>
+        <div class="main">
+            <div class="left">
+                <p>Left Content</p>
+            </div>
+            <div class="right">
+                <p>Right Content</p>
+            </div>
+        </div>
+        <footer>
+            <p>Footer</p>
+        </footer>
     </div>
 </body>
 </html>

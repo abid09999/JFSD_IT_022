@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">    
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            width: 70%;
+            height: 100%;
+            margin: 0 auto;
+            padding: 15px;
+            background-color: #fff;
+            border-radius: 7px;
+            box-shadow: 0 0 60px rgba(0, 0, 0, 0.5);
+        }
+        h2 {
+            text-align: center;
+        }
+        input[type="text"], input[type="email"] {
+            width: 100%;
+            padding: 3px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: #fff;
+            cursor: pointer;
+        }
+        input[type="submit"]:hover {
+            background-color: silver;
+        }
+    </style>
+</head>
+<body>
+    
+        
+    <div class="container">
+        <h2>STUDENT INFORMATION</h2>
+        <form action="login.php" method="POST">
+            <label for = "username">Student Name:<input type="text" name="Student Name"  required></label>
+            <label for = "Email">Email:<input type="email" name="email"  required></label></br>
+            <label for="Depart">Department:</label>
+            <input type="radio" name="Depart" value="CSE">CSE
+            <input type="radio" name="Depart" value="IT">IT
+            <input type="radio" name="Depart" value="AE">AE</br>
+            <br>
+            <label for="Registration">Registration Number:</label><input type="text" name="Registration" ></label><br/>
+            <label for="Interest">Interests:</label></br>
+            <input type="checkbox">Cultural
+            <input type="checkbox">Technical
+            <input type="checkbox">Sports</br>
+        </br>
+        
+            <label for = "Comments">Comments:<input type="text" name="Comments"></label>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    </body>
+</html>
